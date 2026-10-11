@@ -1,0 +1,16 @@
+CREATE DATABASE IF NOT EXISTS loja_construcao CHARACTER SET utf8mb4;
+USE loja_construcao;
+CREATE TABLE IF NOT EXISTS cliente (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    cpf VARCHAR(11) NOT NULL,
+    telefone VARCHAR(20),
+    endereco VARCHAR(200)
+);
+CREATE TABLE IF NOT EXISTS produto (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    categoria VARCHAR(50),
+    quantidade INT NOT NULL DEFAULT 0,
+    preco DECIMAL(10,2) NOT NULL DEFAULT 0
+);
